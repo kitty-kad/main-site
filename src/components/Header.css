@@ -1,0 +1,134 @@
+.header {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    position: relative;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.nav li {
+    margin-left: 20px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav a:hover {
+    color: #58b2ee;
+}
+
+/* Add smooth scroll for the entire page */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Offset for anchors to account for fixed header */
+:target {
+    scroll-margin-top: 80px;
+    /* Adjust based on your header height */
+}
+
+/* Hamburger menu (hidden by default on larger screens) */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 1001;
+}
+
+.hamburger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #333;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+/* Small screen styles */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        max-width: 300px;
+        height: 100vh;
+        background-color: white;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+        transition: right 0.3s ease;
+        padding: 80px 20px 20px;
+        z-index: 1000;
+    }
+
+    .nav.active {
+        right: 0;
+    }
+
+    .nav ul {
+        flex-direction: column;
+    }
+
+    .nav li {
+        margin: 15px 0;
+        margin-left: 0;
+    }
+
+    /* Hamburger animation */
+    .hamburger.active span:nth-child(1) {
+        transform: translateY(11px) rotate(45deg);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: translateY(-11px) rotate(-45deg);
+    }
+
+    /* Add overlay when menu is open */
+    .nav.active::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 30%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: -1;
+    }
+}

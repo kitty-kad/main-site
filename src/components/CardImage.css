@@ -1,0 +1,25 @@
+.card-image-container {
+    margin-top: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 6px;
+    height: 200px;
+    /* Fixed container height */
+}
+
+.card-image {
+    height: 100%;
+    /* Image takes full height of container */
+    width: auto;
+    /* Width scales accordingly */
+    max-height: 200px;
+    object-fit: contain;
+    /* Maintains aspect ratio */
+    transition: transform 0.3s ease;
+}
+
+.card-image:hover {
+    transform: scale(1.05);
+}

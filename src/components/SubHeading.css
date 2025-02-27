@@ -1,0 +1,15 @@
+.subheading {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.subheading.blue {
+    color: white;
+}
+
+.subheading.white {
+    color: #676770;
+}

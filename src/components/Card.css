@@ -1,0 +1,45 @@
+.card {
+    flex: 1;
+    min-width: 250px;
+    padding: 30px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Center the contents */
+    text-align: center;
+    /* Center the text */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card.blue {
+    border: 2px solid white;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.card.white {
+    border: 2px solid #676770;
+    background-color: white;
+}
+
+/* Add a bit more spacing for the content */
+.card>* {
+    margin-bottom: 10px;
+}
+
+.card>*:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}

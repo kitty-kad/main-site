@@ -1,0 +1,16 @@
+.heading {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-align: center;
+    /* Center the heading text */
+}
+
+.heading.blue {
+    color: white;
+}
+
+.heading.white {
+    color: #676770;
+}
